@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a note-taking app, built from starter code at https://github.com/coding-boot-camp/miniature-eureka. It stitches together the front-end starter code with a back-end using Express. Enjoy using the app!
+This project is a note-taking app, built from starter code at https://github.com/coding-boot-camp/miniature-eureka. It stitches together the front-end starter code with a back-end using Express so you can enjoy taking some quick notes in the browser. Enjoy using the app!
 
 ## Installation
 
