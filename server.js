@@ -2,8 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 
-// Import the feedback router
-// const api = require('./routes/index');
+const { v4: uuidv4 } = require('uuid');
 
 const PORT = process.env.PORT || 3001;
 
@@ -22,7 +21,7 @@ app.post('/api/notes', (req, res) => {
       if (err) throw err;
       var notes = JSON.parse(data);
       let userNote = req.body;
-      userNote.id = Math.floor(Math.random() * 5000);
+      userNote.id = uuidv4();
       notes.push(userNote);
     fs.writeFile('./db/db.json', JSON.stringify(notes), (err, data) => {
         res.json(userNote);
