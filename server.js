@@ -65,6 +65,7 @@ app.post('/api/notes', (req, res) => {
      res.sendFile(path.join(__dirname, '/public/index.html'));
   });   
   
+  //msg to say that it is listening when node server is started
   app.listen(PORT, () => {
       console.log(`App listening at http://localhost:${PORT} 🚀`)
   });
