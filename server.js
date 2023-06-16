@@ -34,7 +34,8 @@ app.post('/api/notes', (req, res) => {
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
       if (err) throw err;
       let notes = JSON.parse(data);
-      const newNotes = notes.filter(note => note.id !== parseInt(req.params.id));
+      const newNotes = notes.filter(note => note.id !== (req.params.id));
+      //console.log(newNotes);
     
     fs.writeFile('./db/db.json', JSON.stringify(newNotes), (err, data) => {
       res.json({msg: 'successful'});
@@ -49,6 +50,7 @@ app.post('/api/notes', (req, res) => {
 
   //GET
   app.get('/api/notes', (req, res) => {
+    // console.log();
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
       if (err) throw err;
       var notes = JSON.parse(data);
