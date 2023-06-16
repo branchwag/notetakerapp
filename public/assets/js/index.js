@@ -72,7 +72,7 @@ const handleNoteSave = () => {
     text: noteText.value,
   };
   saveNote(newNote).then(() => {
-    console.log("Should re-render notes");
+    //console.log("Should re-render notes");
     getAndRenderNotes();
     renderActiveNote();
   });
